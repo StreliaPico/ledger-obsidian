@@ -201,7 +201,7 @@ const buildTableRows = (
     const aDate = window.moment(a.date);
     const bDate = window.moment(b.date);
     if (aDate.isSame(bDate)) {
-      return 0;
+      return -1;
     }
     return aDate.isBefore(bDate) ? 1 : -1;
   });
