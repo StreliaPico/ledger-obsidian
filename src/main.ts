@@ -4,6 +4,7 @@ import { LedgerView, LedgerViewType } from './ledgerview';
 import type { EnhancedTransaction, TransactionCache } from './parser';
 import { ISettings, settingsWithDefaults } from './settings';
 import { SettingsTab } from './settings-tab';
+import moment from 'moment';
 import type { default as MomentType } from 'moment';
 import { around } from 'monkey-around';
 import {
@@ -277,7 +278,7 @@ ${window.moment().format('YYYY-MM-DD')} Starting Balances
         block: '',
       },
       value: {
-        date: params.date || '',
+        date: params.date || moment().format('YYYY-MM-DD'),
         payee: params.payee || '',
         comment: params.comment || '',
         expenselines: [
